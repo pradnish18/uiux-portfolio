@@ -6,8 +6,8 @@ const Button = ({ id, title, rightIcon, leftIcon, containerClass, onClick }) => 
       id={id}
       onClick={onClick}
       className={clsx(
-        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-snow px-7 py-3 text-obsidian",
-        containerClass
+        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full px-7 py-3 font-general text-xs uppercase font-bold transition-all duration-300",
+        containerClass || "bg-amber text-obsidian hover:bg-amber-light"
       )}
     >
       {leftIcon}

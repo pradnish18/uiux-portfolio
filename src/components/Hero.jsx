@@ -142,30 +142,36 @@ const Hero = () => {
 
         {/* Top-left overlay content */}
         <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-snow">
-              Pr<b>a</b>dnish
+          <div className="mt-20 px-5 sm:px-10 max-w-3xl">
+            <span className="inline-block rounded-full border border-amber/30 bg-amber/10 px-3 py-1 font-general text-xs uppercase tracking-widest text-amber mb-3">
+              Product Designer &bull; UX Engineer
+            </span>
+            
+            <h1 className="font-zentry special-font text-4xl sm:text-6xl md:text-7xl font-black uppercase text-snow tracking-tight leading-tight">
+              Designing digital products people <b>l</b>ove to use.
             </h1>
 
-            <p className="mb-2 font-robert-regular text-snow/80 text-lg">
-              Full Stack Dev.&nbsp; Designer.&nbsp; Problem Solver.
+            <p className="mt-4 mb-6 font-robert-regular text-snow/80 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+              I turn complex problems into intuitive, accessible experiences through research, interaction design, prototyping, and frontend engineering.
             </p>
 
-            <p className="mb-8 max-w-64 font-robert-regular text-snow/50 text-sm">
-              Building fast, responsive, <br /> and beautiful digital products.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <Button
                 id="view-work-btn"
-                title="View My Work"
+                title="Explore Selected Work"
                 leftIcon={<TiLocationArrow />}
-                containerClass="bg-amber text-obsidian flex-center gap-1 !text-black font-bold"
+                containerClass="bg-amber text-obsidian flex-center gap-1 !text-black font-bold hover:bg-amber-light transition-colors"
                 onClick={() =>
                   document
                     .getElementById("projects")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
+              />
+              <Button
+                id="view-resume-hero-btn"
+                title="View Résumé ↗"
+                containerClass="border border-snow/20 bg-obsidian/80 text-snow hover:border-amber hover:text-amber font-medium transition-colors"
+                onClick={() => window.open("/resume.pdf", "_blank")}
               />
             </div>
           </div>

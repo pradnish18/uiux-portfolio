@@ -27,8 +27,8 @@ const Contact = () => {
         className="relative mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#f25222] p-6 sm:p-10 rounded-2xl shadow-lg text-white cursor-pointer hover:bg-[#ea4819] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 select-none"
       >
         <div>
-          <h2 className="text-2xl sm:text-4xl font-bold font-circular-web tracking-tight uppercase">
-            Let's Build Together
+          <h2 className="font-zentry special-font font-black text-2xl sm:text-4xl tracking-tight uppercase">
+            Let&apos;s Build Together
           </h2>
           <p className="text-xs sm:text-sm font-circular-web text-white/80 mt-2 font-medium">
             Available for Full-Time • Internships • Freelance
