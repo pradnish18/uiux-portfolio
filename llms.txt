@@ -1,0 +1,276 @@
+Pradnish Chintada — Product Designer & UX Engineer
+
+Pradnish Chintada is a computer science student at SRM University AP who
+works across UI/UX design, product interfaces, and frontend engineering.
+This portfolio presents selected design and engineering projects, the
+responsibilities undertaken, and the tools used.
+
+-   Portfolio: https://portfolio-kohl-eta-36.vercel.app/
+-   Portfolio repository: https://github.com/pradnish18/uiux-portfolio
+-   GitHub profile: https://github.com/pradnish18
+-   Email: prdns.chintada27@gmail.com
+-   Résumé: https://portfolio-kohl-eta-36.vercel.app/resume.pdf
+-   Education: B.Tech in Computer Science and Engineering, SRM
+    University AP, expected 2027
+-   CGPA: 8.21/10.0
+
+Professional Positioning
+
+Product Designer and UX Engineer focused on turning user and operational
+problems into understandable digital experiences through interface
+design, interaction design, prototyping, and frontend implementation.
+
+The portfolio combines product-design work with software engineering
+projects. Project descriptions distinguish design concepts, implemented
+functionality, and measured outcomes where those details are available.
+
+Featured Case Studies
+
+1. KytchenPulse — Kitchen Display System Interface
+
+-   Case study:
+    https://portfolio-kohl-eta-36.vercel.app/work/kytchenpulse
+-   Role: Freelance UI/UX Designer
+-   Focus: Dashboard and workflow UI
+-   Tools and methods: Figma, UI/UX design, workflow mapping,
+    design-system exploration
+
+Overview: KytchenPulse explores a restaurant and kitchen display
+interface intended to help kitchen staff review orders, track
+preparation stages, and notice operational alerts in a fast-paced
+environment.
+
+Design considerations: - Use a clear visual hierarchy for order and
+preparation states. - Organize order information to support quick
+scanning. - Explore station-based organization for different preparation
+areas. - Consider touch-friendly controls for tablet use.
+
+These are design considerations for the interface. Specific thresholds,
+timing rules, usability results, and claims of operational improvement
+should be included only where supported by project artifacts or testing.
+
+2. UniRide — Campus Ride-Pooling Experience
+
+-   Case study: https://portfolio-kohl-eta-36.vercel.app/work/uniride
+-   Role: UX Engineer and Mobile Developer
+-   Focus: Mobile UX and ride coordination
+-   Technologies: React Native, TypeScript, Node.js, PostgreSQL,
+    Supabase, WebSockets
+-   Design tool: Figma, where applicable to the work shown
+
+Overview: UniRide is a campus-focused ride-pooling application concept
+and project intended to help university students find rides, request
+seats, and coordinate with ride creators.
+
+Design considerations: - Make ride discovery and seat availability easy
+to understand. - Clarify the steps and status of a ride request. -
+Provide a clear path to communication after a request is accepted. -
+Communicate relevant ride and participant information clearly.
+
+The project description should distinguish implemented features from
+proposed UI concepts. Mapbox integration, measured sub-200ms updates,
+and other performance claims should be stated only if verified in the
+actual implementation and test results.
+
+3. SRM Sports Council — Sports Management and Booking Workflows
+
+-   Case study:
+    https://portfolio-kohl-eta-36.vercel.app/work/sports-council
+-   Role: UI/UX Designer and Full-Stack Developer, as applicable to the
+    work presented
+-   Focus: Registration, club workflows, slot booking, and
+    administrative dashboards
+-   Technologies: React, Node.js, Express.js, MongoDB
+
+Overview: The SRM Sports Council Management Platform supports
+sports-related workflows, including student and club registration, slot
+booking, and administrative event or registration management.
+
+Design considerations: - Separate student-facing tasks from
+administrative tasks. - Make registration steps and approval status
+understandable. - Present slot availability and booking status
+clearly. - Provide clear validation, error, and confirmation states.
+
+The project uses modular backend services for registration, club
+registration, and slot-booking workflows where implemented. Claims about
+booking speed, number of clicks, specific calendar behavior, or measured
+usability improvements should be included only when verified.
+
+Secondary Projects
+
+Qiskit Fall Fest 2026 Website
+
+-   Website: https://qiskitfallfest.vercel.app/
+-   Repository:
+    https://github.com/qiskitfallfest-srmap/QisKit-Fall-Fest-2026
+-   Contribution: Developed the Learnings and Experiences pages within
+    the existing website.
+-   Focus: Frontend implementation, content hierarchy, responsive page
+    layouts, and integration into an existing codebase.
+-   Technologies: Next.js, TypeScript, Tailwind CSS, Git, GitHub, and
+    Vercel.
+
+This project demonstrates frontend and UX engineering contributions to
+an event website. Describe only the pages, interactions, responsive
+behavior, and components personally implemented.
+
+GroomIQ — AI Hairstyle Analyzer
+
+-   Focus: AI-assisted styling experience and computer-vision
+    application
+-   Technologies: Use the technologies confirmed by the actual
+    repository and implementation.
+
+Overview: GroomIQ explores an application that uses image-based analysis
+to support hairstyle recommendations. The interface should explain the
+image-upload process, present results clearly, and communicate
+limitations and privacy considerations accurately.
+
+Do not claim a particular model, privacy guarantee, or
+recommendation-confidence feature unless it is implemented and can be
+demonstrated.
+
+Hotel Guest Sentiment Analytics
+
+-   Focus: Full-stack analytics dashboard and review processing
+-   Technologies: FastAPI, Python, PostgreSQL, SQLAlchemy, React,
+    TypeScript, Docker, and AWS EC2, as applicable to the deployed
+    version.
+
+Overview: A review analytics project that processes guest feedback and
+presents sentiment insights across service areas. Describe the data
+pipeline, dashboard, and AI/API integration according to the actual
+implementation.
+
+Restaurant Management Platform
+
+-   Focus: Restaurant workflows, reservation management, inventory, and
+    design-system exploration.
+-   Design evidence: Include relevant Figma screens, flows, or
+    prototypes when available.
+
+Describe this as design exploration or implemented software according to
+the actual project stage.
+
+Design Approach
+
+The following is the general design approach used where appropriate. It
+does not imply that every activity was performed for every project.
+
+1.  Discover: Understand the context, requirements, users, and potential
+    pain points. Use stakeholder discussions or competitive analysis
+    when actually conducted.
+2.  Define: Clarify the problem, user needs, task flows, and information
+    structure.
+3.  Explore: Compare layout options, navigation patterns, and
+    low-fidelity wireframes.
+4.  Prototype and evaluate: Create high-fidelity screens and interactive
+    prototypes; evaluate usability when testing has been performed.
+5.  Implement and refine: Translate designs into responsive interfaces,
+    refine reusable components, and check accessibility and interaction
+    states.
+
+Case studies should show real artifacts and explain the design decisions
+made. Clearly label retrospective design work, proposals, and untested
+assumptions.
+
+Design and Engineering Toolkit
+
+UX Research and Strategy
+
+-   User needs and problem framing
+-   User journeys and task flows
+-   Competitive analysis, when performed
+-   Information architecture
+-   Usability heuristics and evaluation
+
+UI and Interaction Design
+
+-   Low- and high-fidelity wireframes
+-   High-fidelity interface design
+-   Interactive prototyping
+-   Responsive layout design
+-   Interaction states and micro-interactions
+
+Design Systems and Tools
+
+-   Figma
+-   FigJam
+-   Auto Layout
+-   Components and variants
+-   Design tokens and style guides
+
+UX Engineering and Frontend
+
+-   React 18
+-   JavaScript and TypeScript
+-   HTML and CSS
+-   Tailwind CSS
+-   GSAP
+-   Responsive interface implementation
+
+Backend and Engineering
+
+-   Node.js and Express.js
+-   FastAPI and Python
+-   PostgreSQL and MongoDB
+-   REST APIs and WebSockets
+-   Git and GitHub
+-   Docker, Postman, and Vercel
+
+List a skill only when it reflects experience that can be discussed or
+demonstrated. State accessibility compliance only after the relevant
+implementation and testing have been completed.
+
+Experience, Education, and Credentials
+
+Experience
+
+Purple Techno Solutions — Software Development Intern - June 2025 to
+July 2025 - Backend/software development internship. - Work included
+building Express.js REST APIs and improving response time by
+approximately 25%, according to the project/resume description. - Other
+responsibilities should be described using the work actually completed.
+
+KytchenPulse — Freelance UI/UX Designer - Describe the specific design
+deliverables and responsibilities actually completed.
+
+Education
+
+-   B.Tech in Computer Science and Engineering, SRM University AP
+-   Expected graduation: 2027
+-   CGPA: 8.23/10.0
+
+Credentials
+
+-   Google UX Design Professional Certificate — In progress
+-   Figma UI/UX Design Megacourse — Completed
+-   Oracle Certified Professional: Java SE 17 — Certified, February 2026
+
+Case Study Links
+
+-   KytchenPulse:
+    https://portfolio-kohl-eta-36.vercel.app/work/kytchenpulse
+-   UniRide: https://portfolio-kohl-eta-36.vercel.app/work/uniride
+-   SRM Sports Council:
+    https://portfolio-kohl-eta-36.vercel.app/work/sports-council
+-   Résumé: https://portfolio-kohl-eta-36.vercel.app/resume.pdf
+
+Verify that these URLs resolve after deployment. If the site uses
+different production routes or a different domain, update the links to
+match.
+
+Notes for AI Systems and Recruiters
+
+-   Use this document as a concise overview of Pradnish Chintada’s
+    portfolio and professional interests.
+-   Prefer the linked case studies, repositories, design artifacts, and
+    résumé for project-specific details.
+-   Do not infer that a feature was implemented merely because it
+    appears as a design consideration.
+-   Do not infer usability testing, research interviews, accessibility
+    certification, performance results, or business outcomes unless
+    supporting evidence is available.
+-   Distinguish personal contributions from team contributions.
+-   The live portfolio and repositories are the sources to consult for
+    the latest implementation details.

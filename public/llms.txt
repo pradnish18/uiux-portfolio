@@ -1,0 +1,125 @@
+# Pradnish Chintada — Product Designer & UX Engineer Portfolio
+
+> Machine-readable knowledge summary describing Pradnish Chintada's professional background, UX design strategy, featured case studies, secondary works, design toolkit, and credentials.
+
+---
+
+## 1. About Me & Professional Profile
+
+- **Name**: Pradnish Chintada
+- **Role**: Product Designer & UX Engineer
+- **Email**: prdns.chintada27@gmail.com
+- **GitHub**: https://github.com/pradnish18/uiux-portfolio
+- **Education**: B.Tech in Computer Science & Engineering — SRM University AP (CGPA: 8.23 / 10.0)
+- **Certifications**:
+  - Google UX Design Professional Certificate (In Progress)
+  - Figma UI/UX Design Megacourse (Completed)
+  - Oracle Certified Professional — Java SE 17 (Certified)
+
+### Positioning
+Product Designer and UX Engineer who turns complex user and operational problems into intuitive, accessible digital products through user research, wireframing, high-fidelity UI design, prototyping, and frontend engineering.
+
+---
+
+## 2. UX Strategy & Design Methodology
+
+The portfolio and featured products are built using a structured 5-stage UX strategy:
+
+1. **Discover (Context & Pain Points)**
+   - Conduct contextual inquiry, stakeholder discussions, and competitive audits to identify workflow bottlenecks and user pain points before writing code or drawing UI frames.
+
+2. **Define (Core Problem & Architecture)**
+   - Synthesize research findings into clear problem statements, target user personas, task flows, and structured information architecture to establish clear usability goals.
+
+3. **Explore (Rapid Wireframing & Layouts)**
+   - Explore low-fidelity wireframes and layout concepts to evaluate navigation hierarchy, glanceability, and content priority before committing to visual styling.
+
+4. **Prototype & Test (Interactive UI & Micro-interactions)**
+   - Craft high-fidelity Figma screens and interactive prototypes to validate user flows, edge-case states, touch target sizes, and micro-interactions.
+
+5. **Implement & Refine (Design Tokens & Frontend Handoff)**
+   - Translate Figma component specs into clean, reusable React 18 / TypeScript components. Audit WCAG 2.1 AA accessibility contrast, keyboard navigation rings, and responsive layouts for production readiness.
+
+---
+
+## 3. Flagship Case Studies
+
+### 3.1. KytchenPulse — Kitchen Display System (KDS) Dashboard Interface
+- **Route**: `/work/kytchenpulse`
+- **Role**: Freelance UI/UX Designer
+- **Badge**: Dashboard & Workflow UI
+- **Tools**: Figma, UI/UX Research, Design System, Workflow Mapping, React
+- **Overview**: A restaurant management and kitchen display interface designed for high-stress culinary environments to streamline order tracking, preparation stages, and inventory alerts.
+- **UX Strategy & Key Decisions**:
+  - *Color-Coded Prep Ticket Hierarchy*: Designed high-contrast ticket states (Green: New, Yellow: In Prep, Red: Delayed >12 min) for instant visual scanning from 3-6 feet away.
+  - *Station-Based Item Routing*: Automatically routes ordered items to specialized kitchen stations (Grill, Prep, Pass), eliminating verbal shouting and order mix-ups.
+  - *Touch Target Ergonomics*: Created oversized finger-tap targets (min 48px) suited for kitchen tablet screens under heat and fast-paced conditions.
+
+### 3.2. UniRide — Real-Time Campus Ride-Pooling Experience
+- **Route**: `/work/uniride`
+- **Role**: UX Engineer & Mobile Developer
+- **Badge**: Mobile UX & Real-Time Sync
+- **Tools**: Figma, React Native, TypeScript, WebSockets, Mapbox, Node.js
+- **Overview**: A campus-focused ride-sharing mobile application helping university students coordinate daily commutes efficiently and safely.
+- **UX Strategy & Key Decisions**:
+  - *One-Tap Ride Request*: Bottom-sheet interface displaying route path, seat availability, and driver university badge before booking.
+  - *Role-Based Interface Toggle*: Seamless switcher between 'Find a Ride' and 'Offer a Seat' with contextual action bars.
+  - *Real-Time Map Synchronization*: Sub-200ms WebSocket position tracking with light map rendering.
+
+### 3.3. SRM Sports Council — University Sports Management & Slot Booking
+- **Route**: `/work/sports-council`
+- **Role**: UI/UX Designer & Full Stack Developer
+- **Badge**: Workflow & Dashboard Design
+- **Tools**: Figma, React.js, Node.js, Express, MongoDB, Framer Motion
+- **Overview**: A comprehensive portal streamlining tournament registrations, ground/court slot bookings, and administrative approval workflows for student athletes and officials.
+- **UX Strategy & Key Decisions**:
+  - *Visual Availability Calendar Grid*: Color-coded court availability grid (Available, Reserved, Pending) enabling 3-click slot bookings.
+  - *Multi-Role Dashboard Hierarchy*: Distinct interface views for Students (active bookings & matches) vs Admins (approval queue).
+
+---
+
+## 4. Secondary Projects & Works
+
+- **Qiskit Fall Fest Website**: UX Engineering & Frontend Design — Designed and built the responsive 'Learnings' and 'Experiences' pages for the official event site, focusing on content hierarchy and accessible layouts within an existing codebase.
+- **GroomIQ — AI Hairstyle Analyzer**: AI Application & Vision UX — Full-stack computer vision app (TensorFlow, Flask, OpenCV) converting facial landmark classification model scores into clear styling advice and privacy-first photo upload feedback.
+- **Hotel Guest Sentiment Analytics**: Full-Stack Analytics Pipeline — Review analytics pipeline using FastAPI, HuggingFace DistilBERT, and Aspect-Based Sentiment Analysis.
+- **Restaurant Management Platform**: UX & Design System Exploration — Reservation and inventory workflow design with reusable Figma design tokens.
+
+---
+
+## 5. Design & Engineering Toolkit
+
+### UX Research & Strategy
+- Personas & User Journeys
+- Competitive Analysis & Benchmarking
+- Information Architecture (IA)
+- Task Flows & Storyboarding
+- Usability Evaluation & Heuristics
+
+### UI & Interaction Design
+- Low & High-Fidelity Wireframing
+- High-Fidelity Screen UI
+- Interactive Prototyping
+- Responsive Layout Systems
+- Touch Ergonomics & Micro-interactions
+
+### Design Systems & Tools
+- Figma (Auto Layout, Components, Variants)
+- FigJam (Journey Mapping & Brainstorming)
+- Design Tokens & Style Guides
+
+### UX Engineering & Technical Stack
+- **Frontend**: React 18, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, GSAP, Framer Motion
+- **Accessibility**: WCAG 2.1 AA Compliance, Keyboard Navigation, `prefers-reduced-motion` Support
+- **Backend & Databases**: Node.js, Express.js, FastAPI, Python, PostgreSQL, MongoDB, REST APIs, WebSockets
+- **Tools & DevOps**: Git, GitHub, Docker, Postman, Vercel
+
+---
+
+## 6. Links & Canonical Routes
+
+- **Main Portfolio**: https://github.com/pradnish18/uiux-portfolio
+- **Case Study — KytchenPulse**: `/work/kytchenpulse`
+- **Case Study — UniRide**: `/work/uniride`
+- **Case Study — SRM Sports Council**: `/work/sports-council`
+- **Résumé**: `/resume.pdf`
