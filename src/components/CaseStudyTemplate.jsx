@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { TiLocationArrow } from "react-icons/ti";
 import { FaGithub, FaArrowLeft } from "react-icons/fa";
 import { caseStudiesData } from "../data/caseStudiesData";
+import LazyVideo from "./LazyVideo";
 
 const CaseStudyTemplate = () => {
   const { id } = useParams();
@@ -52,7 +53,7 @@ const CaseStudyTemplate = () => {
       <main className="container mx-auto px-5 md:px-12 max-w-5xl pt-12">
         {/* Header Section */}
         <header className="mb-16">
-          <h1 className="font-zentry text-4xl sm:text-6xl md:text-7xl font-black text-snow uppercase tracking-tight mb-4">
+          <h1 className="font-zentry text-4xl sm:text-6xl md:text-7xl font-black text-snow uppercase tracking-widest mb-4">
             {caseStudy.title}
           </h1>
           <p className="font-circular-web text-lg sm:text-xl text-snow/70 max-w-3xl leading-relaxed mb-8">
@@ -108,6 +109,12 @@ const CaseStudyTemplate = () => {
                 ))}
               </div>
             </div>
+            {caseStudy.organization && (
+              <div className="col-span-2 md:col-span-4 pt-3 border-t border-snow/10">
+                <p className="font-general text-[11px] uppercase tracking-widest text-snow/40">Collaboration & Context</p>
+                <p className="font-robert-medium text-xs sm:text-sm text-snow/80 mt-1">{caseStudy.organization}</p>
+              </div>
+            )}
           </div>
         </header>
 
@@ -118,6 +125,14 @@ const CaseStudyTemplate = () => {
             <p className="font-circular-web text-base sm:text-lg text-snow/90 leading-relaxed">
               {caseStudy.overview}
             </p>
+            {caseStudy.designIntent && (
+              <div className="mt-4 rounded-xl border border-amber/20 bg-amber/5 p-4 text-sm text-snow/80">
+                <span className="font-general text-[10px] uppercase tracking-widest text-amber block mb-1">
+                  Central Design Intent
+                </span>
+                <p className="italic font-circular-web">&ldquo;{caseStudy.designIntent}&rdquo;</p>
+              </div>
+            )}
           </div>
 
           <div className="rounded-2xl border border-snow/10 bg-obsidian-surface p-6 sm:p-8">
@@ -126,6 +141,16 @@ const CaseStudyTemplate = () => {
               {caseStudy.problem}
             </p>
           </div>
+
+          {/* Design Direction (Optional) */}
+          {caseStudy.designDirection && (
+            <div className="rounded-2xl border border-snow/10 bg-obsidian-surface/60 p-6 sm:p-8">
+              <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-3">Design Direction & Aesthetic</h2>
+              <p className="font-circular-web text-base text-snow/80 leading-relaxed">
+                {caseStudy.designDirection}
+              </p>
+            </div>
+          )}
 
           {/* Constraints (Optional) */}
           {caseStudy.constraints && caseStudy.constraints.length > 0 && (
@@ -142,6 +167,86 @@ const CaseStudyTemplate = () => {
             </div>
           )}
         </section>
+
+        {/* Scope & Personal Contribution (Optional) */}
+        {caseStudy.scope && caseStudy.scope.length > 0 && (
+          <section className="mb-16">
+            <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-6">Scope & Direct Contribution</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {caseStudy.scope.map((item, idx) => (
+                <div key={idx} className="rounded-2xl border border-snow/10 bg-obsidian-surface p-5 flex flex-col justify-between">
+                  <div>
+                    <span className="inline-block rounded-full bg-amber/10 px-2.5 py-0.5 text-[10px] font-bold text-amber mb-2">
+                      Area #{idx + 1}
+                    </span>
+                    <h3 className="font-robert-medium text-sm text-snow mb-1.5">{item.title}</h3>
+                    <p className="font-circular-web text-xs text-snow/70 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Audience Lenses & User Needs (Optional) */}
+        {caseStudy.audience && caseStudy.audience.length > 0 && (
+          <section className="mb-16">
+            <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-6">Audience Lenses & User Needs</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {caseStudy.audience.map((item, idx) => (
+                <div key={idx} className="rounded-2xl border border-snow/10 bg-obsidian-surface p-6 flex flex-col justify-between">
+                  <div>
+                    <span className="inline-block rounded-full border border-amber/30 bg-amber/10 px-3 py-0.5 text-[10px] font-bold text-amber uppercase tracking-wider mb-2">
+                      {item.persona}
+                    </span>
+                    <h3 className="font-robert-medium text-base text-snow mb-2">{item.goal}</h3>
+                    <p className="font-circular-web text-xs text-snow/70 leading-relaxed mb-3">
+                      <strong className="text-snow/90 font-medium">Information Need:</strong> {item.need}
+                    </p>
+                  </div>
+                  <div className="rounded-xl bg-obsidian/60 border border-snow/5 p-3 text-xs text-amber/90">
+                    <strong className="text-amber">Design Consideration:</strong> {item.consideration}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* User Journey Flow (Optional) */}
+        {caseStudy.journey && (
+          <section className="mb-16">
+            <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-6">Information Architecture & User Journey</h2>
+            <div className="rounded-2xl border border-snow/10 bg-obsidian-surface p-6 sm:p-8 space-y-6">
+              <p className="font-circular-web text-sm text-snow/80 leading-relaxed">
+                {caseStudy.journey.description}
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5">
+                {caseStudy.journey.steps.map((step, idx) => (
+                  <div key={idx} className="rounded-xl border border-amber/20 bg-amber/5 p-3 flex flex-col justify-between min-h-[90px]">
+                    <span className="text-[10px] font-mono text-amber mb-1 font-bold">0{idx + 1}</span>
+                    <p className="font-robert-medium text-xs text-snow leading-snug">{step}</p>
+                  </div>
+                ))}
+              </div>
+
+              {caseStudy.journey.principles && (
+                <div className="pt-4 border-t border-snow/10">
+                  <h3 className="font-general text-[11px] uppercase tracking-widest text-snow/50 mb-3">Navigation & Journey Principles</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {caseStudy.journey.principles.map((p, idx) => (
+                      <li key={idx} className="text-xs text-snow/70 flex gap-2 leading-relaxed">
+                        <span className="text-amber shrink-0">&bull;</span>
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* Key Design Decisions (Optional) */}
         {caseStudy.decisions && caseStudy.decisions.length > 0 && (
@@ -163,15 +268,63 @@ const CaseStudyTemplate = () => {
           </section>
         )}
 
+        {/* Design System & Specifications (Optional) */}
+        {caseStudy.designSystem && (
+          <section className="mb-16">
+            <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-6">04. Design System & Tokens</h2>
+            <div className="rounded-2xl border border-snow/10 bg-obsidian-surface p-6 sm:p-8 space-y-6">
+              <p className="font-circular-web text-sm text-snow/80 leading-relaxed">
+                {caseStudy.designSystem.description}
+              </p>
+
+              {/* Color Tokens Palette */}
+              {caseStudy.designSystem.colors && (
+                <div>
+                  <h3 className="font-general text-[11px] uppercase tracking-widest text-snow/50 mb-3">
+                    Color Tokens Palette
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                    {caseStudy.designSystem.colors.map((color, idx) => (
+                      <div key={idx} className="rounded-xl border border-snow/10 bg-obsidian/60 p-2.5">
+                        <div
+                          className="h-10 w-full rounded-lg mb-2 border border-white/10"
+                          style={{ backgroundColor: color.hex }}
+                        />
+                        <p className="font-robert-medium text-xs text-snow truncate">{color.name}</p>
+                        <p className="font-mono text-[10px] text-snow/50 uppercase">{color.hex}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Typography, Grid & Elevation Specs */}
+              {caseStudy.designSystem.specs && (
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-snow/10">
+                  {caseStudy.designSystem.specs.map((spec, idx) => (
+                    <div key={idx} className="rounded-xl bg-obsidian/40 border border-snow/5 p-4">
+                      <p className="font-general text-[10px] uppercase tracking-widest text-amber mb-1">{spec.label}</p>
+                      <p className="font-robert-medium text-sm text-snow">{spec.value}</p>
+                      <p className="text-xs text-snow/50 mt-1 leading-relaxed">{spec.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* Visual Artifacts Showcase (Optional) */}
         {caseStudy.artifacts && caseStudy.artifacts.length > 0 && (
           <section className="mb-16">
-            <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-6">04. Design & UI Showcase</h2>
+            <h2 className="font-general text-xs uppercase tracking-widest text-amber mb-6">
+              {caseStudy.designSystem ? "05. Key Screens & Flows" : "04. Design & UI Showcase"}
+            </h2>
             <div className="space-y-8">
               {caseStudy.artifacts.map((artifact, idx) => (
                 <div key={idx} className="overflow-hidden rounded-2xl border border-snow/10 bg-obsidian-surface">
                   {artifact.type === "video" ? (
-                    <video
+                    <LazyVideo
                       src={artifact.url}
                       controls
                       autoPlay
@@ -183,7 +336,7 @@ const CaseStudyTemplate = () => {
                     <img
                       src={artifact.url}
                       alt={artifact.title}
-                      className="w-full max-h-[500px] object-cover object-center"
+                      className="w-full max-h-[640px] object-contain bg-obsidian/40 object-center"
                     />
                   )}
                   <div className="p-4 border-t border-snow/10 bg-obsidian/60">

@@ -4,6 +4,7 @@ import { TiLocationArrow } from "react-icons/ti";
 import { FaGithub } from "react-icons/fa";
 import { projectsData } from "../data/projectsData";
 import AnimatedTitle from "./AnimatedTitle";
+import LazyVideo from "./LazyVideo";
 
 // ─── BentoTilt — 3D mouse-tilt wrapper ───────────────────────────────────────
 export const BentoTilt = ({ children, className = "" }) => {
@@ -53,28 +54,28 @@ const FeaturedCaseStudyCard = ({
   return (
     <div className="relative size-full overflow-hidden rounded-2xl border border-snow/10 bg-obsidian-surface transition-all duration-300 hover:border-amber/40">
       {src ? (
-        <video
+        <LazyVideo
           src={src}
-          loop
-          muted
-          autoPlay
           className="absolute left-0 top-0 size-full object-cover object-center opacity-60"
+        />
+      ) : imgSrc ? (
+        <img
+          src={imgSrc}
+          alt={title}
+          className="absolute left-0 top-0 size-full object-cover object-center opacity-50"
         />
       ) : (
-        <img
-          src={imgSrc || "/img/gallery-1.jpg"}
-          alt={title}
-          className="absolute left-0 top-0 size-full object-cover object-center opacity-60"
-        />
+        <div className="absolute inset-0 bg-gradient-to-br from-obsidian-surface via-obsidian to-obsidian-border/50" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/60 to-obsidian/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/70 to-obsidian/30 md:bg-gradient-to-r md:from-obsidian/95 md:via-obsidian/75 md:to-transparent" />
+
 
       <div className="relative z-10 flex size-full flex-col justify-between p-6 md:p-8 text-snow">
         <div>
           <span className="inline-block rounded-full border border-amber/40 bg-amber/20 px-3 py-1 text-xs font-general uppercase tracking-widest text-amber mb-3">
             {badge}
           </span>
-          <h2 className="font-zentry text-3xl md:text-5xl font-black uppercase text-snow tracking-tight mb-2">
+          <h2 className="font-zentry text-3xl md:text-5xl font-black uppercase text-snow tracking-widest mb-2">
             {title}
           </h2>
           <p className="font-robert-medium text-sm md:text-base text-amber/90 mb-3">
@@ -115,11 +116,8 @@ const FeaturedCaseStudyCard = ({
 const SecondaryProjectCard = ({ title, badge, description, tech, imgSrc, src, githubUrl }) => (
   <div className="relative size-full overflow-hidden rounded-xl border border-snow/10 bg-obsidian-surface p-5 text-snow flex flex-col justify-between hover:border-snow/20 transition-colors">
     {src ? (
-      <video
+      <LazyVideo
         src={src}
-        loop
-        muted
-        autoPlay
         className="absolute left-0 top-0 size-full object-cover opacity-20"
       />
     ) : imgSrc ? (
@@ -183,10 +181,22 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* ── 3 Flagship Case Studies ── */}
+        {/* ── Flagship Case Studies ── */}
         <div className="space-y-10 mb-20">
           
-          {/* 1. KytchenPulse */}
+          {/* 1. Mini Finance */}
+          <BentoTilt className="h-[480px] md:h-[520px] w-full">
+            <FeaturedCaseStudyCard
+              id="mini-finance"
+              badge="Mobile Fintech UX & Design System"
+              title="Mini Finance"
+              subtitle="Premium UI/UX Refresh"
+              description="A premium mobile finance experience designed around clearer money management, better visual hierarchy, and a cohesive design system."
+              tech={["UI/UX Design", "Product Design", "Mobile App", "Design System"]}
+            />
+          </BentoTilt>
+
+          {/* 2. KytchenPulse */}
           <BentoTilt className="h-[480px] md:h-[520px] w-full">
             <FeaturedCaseStudyCard
               id="kytchenpulse"
@@ -199,7 +209,7 @@ const Projects = () => {
             />
           </BentoTilt>
 
-          {/* 2. UniRide */}
+          {/* 3. UniRide */}
           <BentoTilt className="h-[480px] md:h-[520px] w-full">
             <FeaturedCaseStudyCard
               id="uniride"
@@ -212,16 +222,16 @@ const Projects = () => {
             />
           </BentoTilt>
 
-          {/* 3. SRM Sports Council */}
+          {/* 4. Qiskit Fall Fest 2026 */}
           <BentoTilt className="h-[480px] md:h-[520px] w-full">
             <FeaturedCaseStudyCard
-              id="sports-council"
-              badge="Workflow & Dashboard Design"
-              title="SRM Sports Council"
-              subtitle="University Sports Management, Event Approval & Facility Booking Workflows"
-              description="Streamlining event registrations, court slot bookings, and administrative approval queues for university student athletes and sports officials."
-              tech={["Figma", "React.js", "Node.js", "Express", "MongoDB", "Framer Motion"]}
-              imgSrc="/img/gallery-3.gif"
+              id="qiskit-fall-fest"
+              badge="Event Experience / Web Design / UX Engineering"
+              title="Qiskit Fall Fest 2026"
+              subtitle="Event Website Experience · UI/UX Design & Frontend"
+              description="Designing and building the Learnings and Experiences pages for a global quantum-computing event, with a focus on information architecture, intuitive exploration, responsive layouts, and a cohesive digital experience."
+              tech={["UI/UX Design", "Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"]}
+              imgSrc="/img/qiskit-fall-fest-dashboard.png"
             />
           </BentoTilt>
         </div>
@@ -238,7 +248,7 @@ const Projects = () => {
           />
         </div>
 
-        {/* Bento Grid for Secondary Projects (Including Qiskit Fall Fest) */}
+        {/* Bento Grid for Secondary Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projectsData.map((project) => (
             <BentoTilt key={project.id} className="h-72 w-full">

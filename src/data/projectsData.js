@@ -2,16 +2,15 @@
 
 export const projectsData = [
   {
-    id: "qiskit-fall-fest",
-    title: "Qiskit Fall Fest Website",
-    badge: "UX Engineering & Web Contribution",
+    id: "sports-council",
+    title: "SRM Sports Council",
+    badge: "Workflow & Dashboard Design",
     description:
-      "Contributed key frontend and UX components for the official Qiskit Fall Fest event site. Designed and built the responsive 'Learnings' and 'Experiences' pages, incorporating accessible layouts, structured content hierarchy, and seamless navigation within an existing codebase.",
-    tech: ["React", "JavaScript", "CSS3", "Responsive Design", "Component Handoff"],
-    imgSrc: "/img/gallery-5.webp",
+      "University sports management, event approvals, and facility booking workflows designed with role-based queues and interactive court slot reservation calendars.",
+    tech: ["Figma", "React.js", "Node.js", "Express", "MongoDB", "Framer Motion"],
+    imgSrc: "/img/gallery-3.gif",
     liveUrl: "#",
     githubUrl: "#",
-    featured: true,
   },
   {
     id: "groomiq-secondary",

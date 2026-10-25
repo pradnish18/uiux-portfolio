@@ -23,10 +23,38 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    if (loadedVideos === totalVideos - 1) {
+    // Dismiss loader as soon as the main hero video is ready
+    if (loadedVideos >= 1) {
       setLoading(false);
     }
   }, [loadedVideos]);
+
+  // Safety fallback: Never keep the user stuck behind the loader
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Preload remaining hero videos sequentially during idle time
+  useEffect(() => {
+    const preloadVideos = () => {
+      [2, 3, 4].forEach((idx) => {
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.as = "video";
+        link.href = `videos/hero-${idx}.mp4`;
+        document.head.appendChild(link);
+      });
+    };
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(preloadVideos);
+    } else {
+      setTimeout(preloadVideos, 1500);
+    }
+  }, []);
+
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -76,6 +104,7 @@ const Hero = () => {
   });
 
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
+  const getPosterSrc = (index) => `videos/hero-${index}-poster.webp`;
 
   return (
     <div id="hero" className="relative h-dvh w-screen overflow-x-hidden">
@@ -102,8 +131,9 @@ const Hero = () => {
                 className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
               >
                 <video
-                  ref={nextVdRef}
                   src={getVideoSrc((currentIndex % totalVideos) + 1)}
+                  poster={getPosterSrc((currentIndex % totalVideos) + 1)}
+                  preload="metadata"
                   loop
                   muted
                   id="current-video"
@@ -117,6 +147,8 @@ const Hero = () => {
           <video
             ref={nextVdRef}
             src={getVideoSrc(currentIndex)}
+            poster={getPosterSrc(currentIndex)}
+            preload="metadata"
             loop
             muted
             id="next-video"
@@ -127,6 +159,10 @@ const Hero = () => {
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
+            poster={getPosterSrc(
+              currentIndex === totalVideos - 1 ? 1 : currentIndex
+            )}
+            preload="auto"
             autoPlay
             loop
             muted

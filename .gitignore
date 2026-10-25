@@ -57,3 +57,4 @@ dist/
 
 # Dev-tool internal files
 .project/
+videos_backup_raw/
